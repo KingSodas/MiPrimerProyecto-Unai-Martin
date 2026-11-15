@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/main"
     android:padding="16dp"
     tools:context=".MainActivity">
 
@@ -84,7 +84,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="🌐 Developers"
+            android:text="Developers"
             android:textStyle="bold"
             android:gravity="center"
             android:padding="12dp"
@@ -100,7 +100,9 @@
             android:textSize="16sp"
             android:layout_marginBottom="8dp" />
 
+        <!-- ID AÑADIDO AQUÍ -->
         <EditText
+            android:id="@+id/etNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Introduce tu nombre"
@@ -175,26 +177,34 @@
             android:textStyle="bold"
             android:layout_marginBottom="4dp" />
 
+        <!-- ID AÑADIDO AQUÍ -->
         <Spinner
+            android:id="@+id/spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp" />
 
         <!-- SeekBar -->
+        <!-- ID AÑADIDO AL TEXTVIEW AQUÍ -->
         <TextView
+            android:id="@+id/tvNivel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nivel seleccionado: 50"
             android:layout_marginBottom="4dp" />
 
+        <!-- ID AÑADIDO AL SEEKBAR AQUÍ -->
         <SeekBar
+            android:id="@+id/seekBarNivel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:progress="50"
             android:layout_marginBottom="16dp" />
 
         <!-- Botón final de guardado -->
+        <!-- ID AÑADIDO AQUÍ -->
         <Button
+            android:id="@+id/btnGuardar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Guardar información"
