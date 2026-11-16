@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        // 1. REFERENCIAS A LAS VISTAS DEL XML
         val etNombre = findViewById<EditText>(R.id.etNombre)
         val spinnerCursos = findViewById<Spinner>(R.id.spinner)
         val tvNivel = findViewById<TextView>(R.id.tvNivel)
@@ -34,7 +33,6 @@ class MainActivity : AppCompatActivity() {
         val btnGuardar = findViewById<Button>(R.id.btnGuardar)
 
 
-        // FUNCIONALIDAD 1: Listener para el SeekBar
         seekBarNivel.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 tvNivel.text = "Nivel seleccionado: $progress"
@@ -44,13 +42,11 @@ class MainActivity : AppCompatActivity() {
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
 
-        // FUNCIONALIDAD 2: Poblar el Spinner (Cursos)
         val listaCursos = arrayOf("Android Básico", "Jetpack Compose", "Kotlin Avanzado", "Flutter desde cero")
         val adaptador = ArrayAdapter(this, android.R.layout.simple_spinner_item, listaCursos)
         adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerCursos.adapter = adaptador
 
-        // FUNCIONALIDAD 3: Acción del Botón Guardar
         btnGuardar.setOnClickListener {
             val nombre = etNombre.text.toString().trim()
             val cursoSeleccionado = spinnerCursos.selectedItem.toString()
